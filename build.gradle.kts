@@ -20,7 +20,18 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlin:kotlin-reflect")
     implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-server")
+
+    // actuator
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+
+    // eureka
+    implementation("org.springframework.cloud:spring-cloud-starter-netflix-eureka-client")
+
+    // web mvc
+    implementation("org.springframework.boot:spring-boot-starter-web")
+
+    // kubernetes-discovery
+    implementation("org.springframework.cloud:spring-cloud-starter-kubernetes-fabric8-all:3.1.0")
 }
 
 extra["springCloudVersion"] = "2023.0.0"
